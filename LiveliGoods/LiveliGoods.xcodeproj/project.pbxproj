@@ -7,23 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112E747935FA6E9CB79DC358 /* Pods_LiveliGoods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B51A750EC4F3D348E5F165 /* Pods_LiveliGoods.framework */; };
 		B551692529159094007356EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551692429159094007356EC /* AppDelegate.swift */; };
 		B551692729159094007356EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551692629159094007356EC /* SceneDelegate.swift */; };
-		B551692929159094007356EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551692829159094007356EC /* ViewController.swift */; };
+		B551692929159094007356EC /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B551692829159094007356EC /* SignInController.swift */; };
 		B551692C29159094007356EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551692A29159094007356EC /* Main.storyboard */; };
 		B551692E29159095007356EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B551692D29159095007356EC /* Assets.xcassets */; };
 		B551693129159095007356EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551692F29159095007356EC /* LaunchScreen.storyboard */; };
+		B57DA36F292437C600B21A17 /* notificationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */; };
+		B57DA370292437C600B21A17 /* goalCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */; };
+		B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */; };
+		B57DA372292437C600B21A17 /* notificationCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA36E292437C600B21A17 /* notificationCellTableViewCell.xib */; };
+		B57DA377292437D600B21A17 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA373292437D400B21A17 /* Functions.swift */; };
+		B57DA378292437D600B21A17 /* notificationSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA374292437D500B21A17 /* notificationSubCell.xib */; };
+		B57DA379292437D600B21A17 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA375292437D500B21A17 /* SettingsVC.swift */; };
+		B57DA37A292437D600B21A17 /* notificationSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA376292437D600B21A17 /* notificationSubCell.swift */; };
+		B580EB39291D7B440053D727 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B580EB38291D7B440053D727 /* GoogleService-Info.plist */; };
+		B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3A291D996C0053D727 /* FoodInput.swift */; };
+		B580EB3D291DB9400053D727 /* Searcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3C291DB9400053D727 /* Searcher.swift */; };
+		B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3E291EAEF60053D727 /* ApiResult.swift */; };
+		B580EB41291EB0C30053D727 /* FoodObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB40291EB0C30053D727 /* FoodObject.swift */; };
+		B580EB45291EBF7F0053D727 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB44291EBF7F0053D727 /* CustomTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		36B51A750EC4F3D348E5F165 /* Pods_LiveliGoods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LiveliGoods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73189A84F895B627B2771313 /* Pods-LiveliGoods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveliGoods.release.xcconfig"; path = "Target Support Files/Pods-LiveliGoods/Pods-LiveliGoods.release.xcconfig"; sourceTree = "<group>"; };
+		99DF9766F1FE9097DC2B557E /* Pods-LiveliGoods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LiveliGoods.debug.xcconfig"; path = "Target Support Files/Pods-LiveliGoods/Pods-LiveliGoods.debug.xcconfig"; sourceTree = "<group>"; };
 		B551692129159094007356EC /* LiveliGoods.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LiveliGoods.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B551692429159094007356EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B551692629159094007356EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B551692829159094007356EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B551692829159094007356EC /* SignInController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		B551692B29159094007356EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B551692D29159095007356EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B551693029159095007356EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B551693229159095007356EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationCellTableViewCell.swift; sourceTree = "<group>"; };
+		B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = goalCellTableViewCell.xib; sourceTree = "<group>"; };
+		B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goalCellTableViewCell.swift; sourceTree = "<group>"; };
+		B57DA36E292437C600B21A17 /* notificationCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = notificationCellTableViewCell.xib; sourceTree = "<group>"; };
+		B57DA373292437D400B21A17 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		B57DA374292437D500B21A17 /* notificationSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = notificationSubCell.xib; sourceTree = "<group>"; };
+		B57DA375292437D500B21A17 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
+		B57DA376292437D600B21A17 /* notificationSubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationSubCell.swift; sourceTree = "<group>"; };
+		B580EB38291D7B440053D727 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B580EB3A291D996C0053D727 /* FoodInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInput.swift; sourceTree = "<group>"; };
+		B580EB3C291DB9400053D727 /* Searcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searcher.swift; sourceTree = "<group>"; };
+		B580EB3E291EAEF60053D727 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
+		B580EB40291EB0C30053D727 /* FoodObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodObject.swift; sourceTree = "<group>"; };
+		B580EB44291EBF7F0053D727 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +63,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				112E747935FA6E9CB79DC358 /* Pods_LiveliGoods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1AB1CE62D963C6C5C61F5FC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36B51A750EC4F3D348E5F165 /* Pods_LiveliGoods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B04EC873E23AE4CF84D6646A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				99DF9766F1FE9097DC2B557E /* Pods-LiveliGoods.debug.xcconfig */,
+				73189A84F895B627B2771313 /* Pods-LiveliGoods.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B551691829159094007356EC = {
 			isa = PBXGroup;
 			children = (
 				B551692329159094007356EC /* LiveliGoods */,
 				B551692229159094007356EC /* Products */,
+				B04EC873E23AE4CF84D6646A /* Pods */,
+				1AB1CE62D963C6C5C61F5FC0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,13 +109,27 @@
 		B551692329159094007356EC /* LiveliGoods */ = {
 			isa = PBXGroup;
 			children = (
+				B580EB38291D7B440053D727 /* GoogleService-Info.plist */,
 				B551692429159094007356EC /* AppDelegate.swift */,
 				B551692629159094007356EC /* SceneDelegate.swift */,
-				B551692829159094007356EC /* ViewController.swift */,
+				B551692829159094007356EC /* SignInController.swift */,
+				B580EB3A291D996C0053D727 /* FoodInput.swift */,
+				B580EB3C291DB9400053D727 /* Searcher.swift */,
+				B580EB3E291EAEF60053D727 /* ApiResult.swift */,
+				B580EB40291EB0C30053D727 /* FoodObject.swift */,
 				B551692A29159094007356EC /* Main.storyboard */,
+				B580EB44291EBF7F0053D727 /* CustomTableViewCell.swift */,
 				B551692D29159095007356EC /* Assets.xcassets */,
 				B551692F29159095007356EC /* LaunchScreen.storyboard */,
 				B551693229159095007356EC /* Info.plist */,
+				B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */,
+				B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */,
+				B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */,
+				B57DA36E292437C600B21A17 /* notificationCellTableViewCell.xib */,
+				B57DA373292437D400B21A17 /* Functions.swift */,
+				B57DA376292437D600B21A17 /* notificationSubCell.swift */,
+				B57DA374292437D500B21A17 /* notificationSubCell.xib */,
+				B57DA375292437D500B21A17 /* SettingsVC.swift */,
 			);
 			path = LiveliGoods;
 			sourceTree = "<group>";
@@ -74,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B551693529159095007356EC /* Build configuration list for PBXNativeTarget "LiveliGoods" */;
 			buildPhases = (
+				09B82BC7B385E87FBD516A4B /* [CP] Check Pods Manifest.lock */,
 				B551691D29159094007356EC /* Sources */,
 				B551691E29159094007356EC /* Frameworks */,
 				B551691F29159094007356EC /* Resources */,
+				97D64CA0609516BBFC8C3C56 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,21 +194,77 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B57DA378292437D600B21A17 /* notificationSubCell.xib in Resources */,
 				B551693129159095007356EC /* LaunchScreen.storyboard in Resources */,
+				B580EB39291D7B440053D727 /* GoogleService-Info.plist in Resources */,
 				B551692E29159095007356EC /* Assets.xcassets in Resources */,
 				B551692C29159094007356EC /* Main.storyboard in Resources */,
+				B57DA372292437C600B21A17 /* notificationCellTableViewCell.xib in Resources */,
+				B57DA370292437C600B21A17 /* goalCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09B82BC7B385E87FBD516A4B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LiveliGoods-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		97D64CA0609516BBFC8C3C56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LiveliGoods/Pods-LiveliGoods-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LiveliGoods/Pods-LiveliGoods-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LiveliGoods/Pods-LiveliGoods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B551691D29159094007356EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B551692929159094007356EC /* ViewController.swift in Sources */,
+				B580EB41291EB0C30053D727 /* FoodObject.swift in Sources */,
+				B580EB3D291DB9400053D727 /* Searcher.swift in Sources */,
+				B580EB45291EBF7F0053D727 /* CustomTableViewCell.swift in Sources */,
+				B551692929159094007356EC /* SignInController.swift in Sources */,
+				B57DA377292437D600B21A17 /* Functions.swift in Sources */,
+				B57DA379292437D600B21A17 /* SettingsVC.swift in Sources */,
+				B57DA37A292437D600B21A17 /* notificationSubCell.swift in Sources */,
+				B57DA36F292437C600B21A17 /* notificationCellTableViewCell.swift in Sources */,
 				B551692529159094007356EC /* AppDelegate.swift in Sources */,
+				B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */,
+				B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */,
+				B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */,
 				B551692729159094007356EC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +407,7 @@
 		};
 		B551693629159095007356EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 99DF9766F1FE9097DC2B557E /* Pods-LiveliGoods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -309,6 +435,7 @@
 		};
 		B551693729159095007356EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 73189A84F895B627B2771313 /* Pods-LiveliGoods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
