@@ -28,9 +28,9 @@ class Searcher {
         theData = try! JSONDecoder().decode(ApiResult.self, from:data)
             
         
-            print(theData.totalNutrients.CHOCDF?.quantity)
-            print(theData.totalNutrients.FAT?.quantity)
-            print(theData.totalNutrients.PROCNT?.quantity)
+        print(theData.totalNutrients.CHOCDF?.quantity)
+        print(theData.totalNutrients.FAT?.quantity)
+        print(theData.totalNutrients.PROCNT?.quantity)
 
 
         return theData

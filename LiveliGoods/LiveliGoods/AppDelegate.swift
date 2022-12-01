@@ -11,6 +11,7 @@ import FirebaseCore
 import GoogleSignIn
 import GoogleUtilities
 import FirebaseAuth
+import FirebaseFirestore
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        GIDSignIn.sharedInstance()?.clientID = FirebaseApp.app()?.options.clientID
         
 //        GIDSignIn.sharedInstance().delegate = self
+        
         
         return true
     }
@@ -46,6 +48,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
       -> Bool {
       return GIDSignIn.sharedInstance.handle(url)
     }
+    
+    
+
     
     
 

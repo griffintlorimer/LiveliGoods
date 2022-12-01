@@ -7,8 +7,7 @@
 
 import Foundation
 import UIKit
-
-
+import FirebaseFirestore
 
 class DetailedFoodView: UIViewController {
     
@@ -122,6 +121,32 @@ class DetailedFoodView: UIViewController {
     
     @objc func buttonPressed(){
         print("button pressed")
+        print(globalName)
+        
+        var db = Firestore.firestore()
+        var alreadyInDB = false
+        
+        db.collection("users")
+            .getDocuments() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    for document in querySnapshot!.documents {
+                        let nam = document.data()["name"] as? String ?? "FAIL"
+                        let dat = document.data()["date"] as? String ?? "FAIL"
+                        var count = document.data()["currentCalCount"] as? Int ?? 0
+                        count += self.currentCals
+                        if (nam == globalName){
+                            db.collection("users").document(document.documentID).updateData(["currentCalCount": count])
+                            
+                        }
+                    }
+
+                }
+        }
+        
+        
+        
         navigationController?.popViewController(animated: true)
 //        navigationController.back
     }
