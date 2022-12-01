@@ -8,9 +8,13 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-
-    @IBOutlet var bigLabel: UILabel?
+    @IBOutlet var foodLabel: UILabel!
     
-    @IBOutlet var smallLabel: UILabel?
+    @IBOutlet var calorieLabel: UILabel!
     
+    @IBOutlet var carbsLabel: UILabel!
+    
+    @IBOutlet var fatLabel: UILabel!
+    
+    @IBOutlet var proteinLabel: UILabel!
 }

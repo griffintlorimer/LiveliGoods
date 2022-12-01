@@ -47,7 +47,17 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
         searchTerm = text ?? ""
 
         var data:[ApiResult] = []
-        data.append(searcher.getFoods(searchTerm: text!)!)
+        let results = searcher.getFoods(searchTerm: text!)!
+        if (results.calories < 0.1){
+            let alert = UIAlertController(title: "Invalid search", message: nil, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "exit", style: .cancel, handler: nil))
+            self.present(alert, animated: true)
+            return
+        }
+        
+        data.append(results)
+        
+
         
         apiResults = data
         self.tableView.reloadData()
@@ -63,16 +73,38 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! CustomTableViewCell
-
-        cell.bigLabel?.text = searchTerm
         
-        cell.smallLabel?.text = "calories: \(apiResults[indexPath.row].calories.value)"
+        if let fat = apiResults[indexPath.row].totalNutrients.CHOCDF, let carbs = apiResults[indexPath.row].totalNutrients.CHOCDF, let protein = apiResults[indexPath.row].totalNutrients.PROCNT {
+            cell.foodLabel?.text = searchTerm
+            cell.calorieLabel?.text = "calories: \( Int(apiResults[indexPath.row].calories))"
+            cell.carbsLabel?.text = "carbs: \(Int(carbs.quantity))g"
+            cell.fatLabel?.text = "fat: \(Int(fat.quantity))g"
+            cell.proteinLabel?.text = "protein: \(Int(protein.quantity))g"
+        }
+
+
         
         
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("called!")
+        if let fat = apiResults[indexPath.row].totalNutrients.CHOCDF, let carbs = apiResults[indexPath.row].totalNutrients.CHOCDF, let protein = apiResults[indexPath.row].totalNutrients.PROCNT {
+            let dfv = DetailedFoodView()
+            dfv.foodName = searchTerm
+            dfv.calories = Int(apiResults[indexPath.row].calories)
+            dfv.fat = Int(fat.quantity)
+            dfv.protein = Int(protein.quantity)
+            dfv.carbs = Int(carbs.quantity)
+            navigationController?.pushViewController(dfv, animated: true)
+
+        }
+        
+    }
 
     
 }
+
+
+

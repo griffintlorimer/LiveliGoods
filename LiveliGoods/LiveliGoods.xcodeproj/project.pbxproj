@@ -16,6 +16,8 @@
 		B551693129159095007356EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551692F29159095007356EC /* LaunchScreen.storyboard */; };
 		B566DA0F2924707D00A92940 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B566DA0E2924707D00A92940 /* food.jpg */; };
 		B566DA11292472AD00A92940 /* liveligoods.png in Resources */ = {isa = PBXBuildFile; fileRef = B566DA10292472AD00A92940 /* liveligoods.png */; };
+		B56B49B42938107B00FCF701 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56B49B32938107B00FCF701 /* GoogleService-Info.plist */; };
+		B56B49B62938228C00FCF701 /* DetailedFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B49B52938228C00FCF701 /* DetailedFoodView.swift */; };
 		B57DA36F292437C600B21A17 /* notificationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */; };
 		B57DA370292437C600B21A17 /* goalCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */; };
 		B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */; };
@@ -24,7 +26,6 @@
 		B57DA378292437D600B21A17 /* notificationSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA374292437D500B21A17 /* notificationSubCell.xib */; };
 		B57DA379292437D600B21A17 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA375292437D500B21A17 /* SettingsVC.swift */; };
 		B57DA37A292437D600B21A17 /* notificationSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA376292437D600B21A17 /* notificationSubCell.swift */; };
-		B580EB39291D7B440053D727 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B580EB38291D7B440053D727 /* GoogleService-Info.plist */; };
 		B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3A291D996C0053D727 /* FoodInput.swift */; };
 		B580EB3D291DB9400053D727 /* Searcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3C291DB9400053D727 /* Searcher.swift */; };
 		B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3E291EAEF60053D727 /* ApiResult.swift */; };
@@ -46,6 +47,8 @@
 		B551693229159095007356EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B566DA0E2924707D00A92940 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
 		B566DA10292472AD00A92940 /* liveligoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liveligoods.png; sourceTree = "<group>"; };
+		B56B49B32938107B00FCF701 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B56B49B52938228C00FCF701 /* DetailedFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodView.swift; sourceTree = "<group>"; };
 		B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationCellTableViewCell.swift; sourceTree = "<group>"; };
 		B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = goalCellTableViewCell.xib; sourceTree = "<group>"; };
 		B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goalCellTableViewCell.swift; sourceTree = "<group>"; };
@@ -54,7 +57,6 @@
 		B57DA374292437D500B21A17 /* notificationSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = notificationSubCell.xib; sourceTree = "<group>"; };
 		B57DA375292437D500B21A17 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		B57DA376292437D600B21A17 /* notificationSubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationSubCell.swift; sourceTree = "<group>"; };
-		B580EB38291D7B440053D727 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B580EB3A291D996C0053D727 /* FoodInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInput.swift; sourceTree = "<group>"; };
 		B580EB3C291DB9400053D727 /* Searcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searcher.swift; sourceTree = "<group>"; };
 		B580EB3E291EAEF60053D727 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
@@ -112,15 +114,16 @@
 		B551692329159094007356EC /* LiveliGoods */ = {
 			isa = PBXGroup;
 			children = (
-				B580EB38291D7B440053D727 /* GoogleService-Info.plist */,
 				B551692429159094007356EC /* AppDelegate.swift */,
 				B551692629159094007356EC /* SceneDelegate.swift */,
 				B551692829159094007356EC /* SignInController.swift */,
 				B580EB3A291D996C0053D727 /* FoodInput.swift */,
+				B56B49B52938228C00FCF701 /* DetailedFoodView.swift */,
 				B580EB3C291DB9400053D727 /* Searcher.swift */,
 				B580EB3E291EAEF60053D727 /* ApiResult.swift */,
 				B580EB40291EB0C30053D727 /* FoodObject.swift */,
 				B551692A29159094007356EC /* Main.storyboard */,
+				B56B49B32938107B00FCF701 /* GoogleService-Info.plist */,
 				B580EB44291EBF7F0053D727 /* CustomTableViewCell.swift */,
 				B551692D29159095007356EC /* Assets.xcassets */,
 				B551692F29159095007356EC /* LaunchScreen.storyboard */,
@@ -201,8 +204,8 @@
 			files = (
 				B57DA378292437D600B21A17 /* notificationSubCell.xib in Resources */,
 				B551693129159095007356EC /* LaunchScreen.storyboard in Resources */,
+				B56B49B42938107B00FCF701 /* GoogleService-Info.plist in Resources */,
 				B566DA11292472AD00A92940 /* liveligoods.png in Resources */,
-				B580EB39291D7B440053D727 /* GoogleService-Info.plist in Resources */,
 				B551692E29159095007356EC /* Assets.xcassets in Resources */,
 				B551692C29159094007356EC /* Main.storyboard in Resources */,
 				B57DA372292437C600B21A17 /* notificationCellTableViewCell.xib in Resources */,
@@ -270,6 +273,7 @@
 				B57DA36F292437C600B21A17 /* notificationCellTableViewCell.swift in Sources */,
 				B551692529159094007356EC /* AppDelegate.swift in Sources */,
 				B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */,
+				B56B49B62938228C00FCF701 /* DetailedFoodView.swift in Sources */,
 				B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */,
 				B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */,
 				B551692729159094007356EC /* SceneDelegate.swift in Sources */,
