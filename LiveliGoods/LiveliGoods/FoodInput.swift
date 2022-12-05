@@ -19,8 +19,6 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
     var searcher = Searcher()
     var apiResults: [ApiResult] = []
     var searchTerm = ""
-
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +30,6 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
     func setupTableView() {
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: "myCell")
     }
     
     // GET https://api.spoonacular.com/food/search?apiKey=63af9b43d60fbd08b37e7c24aac3e5d87c563d4f&query=apple&number=2
@@ -81,9 +78,6 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
             cell.fatLabel?.text = "fat: \(Int(fat.quantity))g"
             cell.proteinLabel?.text = "protein: \(Int(protein.quantity))g"
         }
-
-
-        
         
         return cell
     }

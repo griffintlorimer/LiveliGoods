@@ -98,9 +98,6 @@ class DetailedFoodView: UIViewController {
         button.addTarget(self,  action: #selector(buttonPressed), for: .touchUpInside)
         view.addSubview(button)
         
-        
-        
-        
     }
     
 
@@ -108,7 +105,7 @@ class DetailedFoodView: UIViewController {
       {
           quantity = Int(sender.value)
           stepLabel.text = "quantity: \(quantity)"
-          calorieLabel.text = "calories: \(String(calories * quantity))g"
+          calorieLabel.text = "calories: \(String(calories * quantity))"
           proteinLabel.text = "protein: \(String(protein * quantity))g"
           fatLabel.text = "fat: \(String(fat * quantity))g"
           carbLabel.text = "carbs: \(String(carbs * quantity))g"

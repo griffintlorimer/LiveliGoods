@@ -91,11 +91,9 @@ class SignInController: UIViewController  {
                                     print("updated!")
                                     
                                     let collection = db.collection("users")
-                                    collection.addDocument(data: ["name": user.displayName!, "date": shortDate, "water": 0, "currentCalCount": 0])
+                                    collection.addDocument(data: ["name": user.displayName!, "date": shortDate, "water": 0, "currentCalCount": 0, "steps":0])
                                 }
                         }
-
-                        
                     }
             
                     

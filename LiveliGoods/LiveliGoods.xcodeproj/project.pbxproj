@@ -31,6 +31,7 @@
 		B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3E291EAEF60053D727 /* ApiResult.swift */; };
 		B580EB41291EB0C30053D727 /* FoodObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB40291EB0C30053D727 /* FoodObject.swift */; };
 		B580EB45291EBF7F0053D727 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB44291EBF7F0053D727 /* CustomTableViewCell.swift */; };
+		B5D7B2DE293D5CB9002B5622 /* StepTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D7B2DD293D5CB9002B5622 /* StepTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,7 @@
 		B580EB3E291EAEF60053D727 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
 		B580EB40291EB0C30053D727 /* FoodObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodObject.swift; sourceTree = "<group>"; };
 		B580EB44291EBF7F0053D727 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		B5D7B2DD293D5CB9002B5622 /* StepTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				B580EB3E291EAEF60053D727 /* ApiResult.swift */,
 				B580EB40291EB0C30053D727 /* FoodObject.swift */,
 				B551692A29159094007356EC /* Main.storyboard */,
+				B5D7B2DD293D5CB9002B5622 /* StepTracker.swift */,
 				B56B49B32938107B00FCF701 /* GoogleService-Info.plist */,
 				B580EB44291EBF7F0053D727 /* CustomTableViewCell.swift */,
 				B551692D29159095007356EC /* Assets.xcassets */,
@@ -277,6 +280,7 @@
 				B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */,
 				B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */,
 				B551692729159094007356EC /* SceneDelegate.swift in Sources */,
+				B5D7B2DE293D5CB9002B5622 /* StepTracker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +428,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AGZFPC8629;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LiveliGoods/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -431,6 +436,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -452,6 +458,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = AGZFPC8629;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = LiveliGoods/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -459,6 +466,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
