@@ -9,7 +9,6 @@ import UIKit
 import FirebaseFirestore
 
 class FoodTrackVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
     
     //STORING DATA VARIABLES
     var breakfastList: [String] = []
@@ -173,6 +172,8 @@ class FoodTrackVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
 
     override func viewDidLoad() {
         loadData()
+        print("global water 3")
+        print(globalWater)
         
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -214,6 +215,7 @@ class FoodTrackVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         breakfastList = globalBreakFast
         lunchList = globalLunch
         dinnerList = globalDinner
+        waterList = globalWater
         
         breakfastTV.reloadData()
         lunchTV.reloadData()

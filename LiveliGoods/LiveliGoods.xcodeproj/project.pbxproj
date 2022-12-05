@@ -22,18 +22,19 @@
 		B55D6BCF293DAF0B00891A28 /* JournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BCB293DAF0A00891A28 /* JournalEntryViewController.swift */; };
 		B55D6BD0293DAF0B00891A28 /* JournalHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BCC293DAF0B00891A28 /* JournalHomeViewController.swift */; };
 		B55D6BD1293DAF0B00891A28 /* JournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BCD293DAF0B00891A28 /* JournalViewController.swift */; };
+		B55D6BD6293E352800891A28 /* goalCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55D6BD2293E352800891A28 /* goalCellTableViewCell.xib */; };
+		B55D6BD7293E352800891A28 /* notificationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BD3293E352800891A28 /* notificationCellTableViewCell.swift */; };
+		B55D6BD8293E352800891A28 /* notificationCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55D6BD4293E352800891A28 /* notificationCellTableViewCell.xib */; };
+		B55D6BD9293E352800891A28 /* goalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BD5293E352800891A28 /* goalCellTableViewCell.swift */; };
+		B55D6BDC293E353100891A28 /* notificationSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BDA293E353100891A28 /* notificationSubCell.swift */; };
+		B55D6BDD293E353100891A28 /* notificationSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B55D6BDB293E353100891A28 /* notificationSubCell.xib */; };
+		B55D6BDF293E354800891A28 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BDE293E354800891A28 /* SettingsVC.swift */; };
+		B55D6BE1293E355000891A28 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BE0293E355000891A28 /* Notifications.swift */; };
 		B566DA0F2924707D00A92940 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B566DA0E2924707D00A92940 /* food.jpg */; };
 		B566DA11292472AD00A92940 /* liveligoods.png in Resources */ = {isa = PBXBuildFile; fileRef = B566DA10292472AD00A92940 /* liveligoods.png */; };
 		B56B49B42938107B00FCF701 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56B49B32938107B00FCF701 /* GoogleService-Info.plist */; };
 		B56B49B62938228C00FCF701 /* DetailedFoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56B49B52938228C00FCF701 /* DetailedFoodView.swift */; };
-		B57DA36F292437C600B21A17 /* notificationCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */; };
-		B57DA370292437C600B21A17 /* goalCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */; };
-		B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */; };
-		B57DA372292437C600B21A17 /* notificationCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA36E292437C600B21A17 /* notificationCellTableViewCell.xib */; };
 		B57DA377292437D600B21A17 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA373292437D400B21A17 /* Functions.swift */; };
-		B57DA378292437D600B21A17 /* notificationSubCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B57DA374292437D500B21A17 /* notificationSubCell.xib */; };
-		B57DA379292437D600B21A17 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA375292437D500B21A17 /* SettingsVC.swift */; };
-		B57DA37A292437D600B21A17 /* notificationSubCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B57DA376292437D600B21A17 /* notificationSubCell.swift */; };
 		B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3A291D996C0053D727 /* FoodInput.swift */; };
 		B580EB3D291DB9400053D727 /* Searcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3C291DB9400053D727 /* Searcher.swift */; };
 		B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = B580EB3E291EAEF60053D727 /* ApiResult.swift */; };
@@ -62,18 +63,19 @@
 		B55D6BCB293DAF0A00891A28 /* JournalEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntryViewController.swift; sourceTree = "<group>"; };
 		B55D6BCC293DAF0B00891A28 /* JournalHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalHomeViewController.swift; sourceTree = "<group>"; };
 		B55D6BCD293DAF0B00891A28 /* JournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalViewController.swift; sourceTree = "<group>"; };
+		B55D6BD2293E352800891A28 /* goalCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = goalCellTableViewCell.xib; path = ../../../../Downloads/NotificationSystem/NotificationSystem/goalCellTableViewCell.xib; sourceTree = "<group>"; };
+		B55D6BD3293E352800891A28 /* notificationCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = notificationCellTableViewCell.swift; path = ../../../../Downloads/NotificationSystem/NotificationSystem/notificationCellTableViewCell.swift; sourceTree = "<group>"; };
+		B55D6BD4293E352800891A28 /* notificationCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = notificationCellTableViewCell.xib; path = ../../../../Downloads/NotificationSystem/NotificationSystem/notificationCellTableViewCell.xib; sourceTree = "<group>"; };
+		B55D6BD5293E352800891A28 /* goalCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = goalCellTableViewCell.swift; path = ../../../../Downloads/NotificationSystem/NotificationSystem/goalCellTableViewCell.swift; sourceTree = "<group>"; };
+		B55D6BDA293E353100891A28 /* notificationSubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = notificationSubCell.swift; path = ../../../../Downloads/NotificationSystem/NotificationSystem/notificationSubCell.swift; sourceTree = "<group>"; };
+		B55D6BDB293E353100891A28 /* notificationSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = notificationSubCell.xib; path = ../../../../Downloads/NotificationSystem/NotificationSystem/notificationSubCell.xib; sourceTree = "<group>"; };
+		B55D6BDE293E354800891A28 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SettingsVC.swift; path = ../../../../Downloads/NotificationSystem/NotificationSystem/SettingsVC.swift; sourceTree = "<group>"; };
+		B55D6BE0293E355000891A28 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		B566DA0E2924707D00A92940 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
 		B566DA10292472AD00A92940 /* liveligoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liveligoods.png; sourceTree = "<group>"; };
 		B56B49B32938107B00FCF701 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B56B49B52938228C00FCF701 /* DetailedFoodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedFoodView.swift; sourceTree = "<group>"; };
-		B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationCellTableViewCell.swift; sourceTree = "<group>"; };
-		B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = goalCellTableViewCell.xib; sourceTree = "<group>"; };
-		B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = goalCellTableViewCell.swift; sourceTree = "<group>"; };
-		B57DA36E292437C600B21A17 /* notificationCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = notificationCellTableViewCell.xib; sourceTree = "<group>"; };
 		B57DA373292437D400B21A17 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
-		B57DA374292437D500B21A17 /* notificationSubCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = notificationSubCell.xib; sourceTree = "<group>"; };
-		B57DA375292437D500B21A17 /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		B57DA376292437D600B21A17 /* notificationSubCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = notificationSubCell.swift; sourceTree = "<group>"; };
 		B580EB3A291D996C0053D727 /* FoodInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodInput.swift; sourceTree = "<group>"; };
 		B580EB3C291DB9400053D727 /* Searcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Searcher.swift; sourceTree = "<group>"; };
 		B580EB3E291EAEF60053D727 /* ApiResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiResult.swift; sourceTree = "<group>"; };
@@ -155,16 +157,17 @@
 				B551692D29159095007356EC /* Assets.xcassets */,
 				B551692F29159095007356EC /* LaunchScreen.storyboard */,
 				B551693229159095007356EC /* Info.plist */,
-				B57DA36D292437C500B21A17 /* goalCellTableViewCell.swift */,
-				B57DA36C292437C500B21A17 /* goalCellTableViewCell.xib */,
-				B57DA36B292437C400B21A17 /* notificationCellTableViewCell.swift */,
-				B57DA36E292437C600B21A17 /* notificationCellTableViewCell.xib */,
 				B57DA373292437D400B21A17 /* Functions.swift */,
-				B57DA376292437D600B21A17 /* notificationSubCell.swift */,
-				B57DA374292437D500B21A17 /* notificationSubCell.xib */,
-				B57DA375292437D500B21A17 /* SettingsVC.swift */,
+				B55D6BE0293E355000891A28 /* Notifications.swift */,
 				B566DA10292472AD00A92940 /* liveligoods.png */,
 				B566DA0E2924707D00A92940 /* food.jpg */,
+				B55D6BD5293E352800891A28 /* goalCellTableViewCell.swift */,
+				B55D6BD2293E352800891A28 /* goalCellTableViewCell.xib */,
+				B55D6BD3293E352800891A28 /* notificationCellTableViewCell.swift */,
+				B55D6BD4293E352800891A28 /* notificationCellTableViewCell.xib */,
+				B55D6BDA293E353100891A28 /* notificationSubCell.swift */,
+				B55D6BDB293E353100891A28 /* notificationSubCell.xib */,
+				B55D6BDE293E354800891A28 /* SettingsVC.swift */,
 			);
 			path = LiveliGoods;
 			sourceTree = "<group>";
@@ -229,14 +232,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B57DA378292437D600B21A17 /* notificationSubCell.xib in Resources */,
 				B551693129159095007356EC /* LaunchScreen.storyboard in Resources */,
 				B56B49B42938107B00FCF701 /* GoogleService-Info.plist in Resources */,
 				B566DA11292472AD00A92940 /* liveligoods.png in Resources */,
+				B55D6BD6293E352800891A28 /* goalCellTableViewCell.xib in Resources */,
+				B55D6BD8293E352800891A28 /* notificationCellTableViewCell.xib in Resources */,
 				B551692E29159095007356EC /* Assets.xcassets in Resources */,
+				B55D6BDD293E353100891A28 /* notificationSubCell.xib in Resources */,
 				B551692C29159094007356EC /* Main.storyboard in Resources */,
-				B57DA372292437C600B21A17 /* notificationCellTableViewCell.xib in Resources */,
-				B57DA370292437C600B21A17 /* goalCellTableViewCell.xib in Resources */,
 				B566DA0F2924707D00A92940 /* food.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,21 +298,22 @@
 				B55D6BC9293DAEAB00891A28 /* SummaryViewController.swift in Sources */,
 				B55D6BC3293D73E600891A28 /* FoodTrackVC.swift in Sources */,
 				B580EB45291EBF7F0053D727 /* CustomTableViewCell.swift in Sources */,
+				B55D6BDF293E354800891A28 /* SettingsVC.swift in Sources */,
 				B551692929159094007356EC /* SignInController.swift in Sources */,
 				B55D6BD1293DAF0B00891A28 /* JournalViewController.swift in Sources */,
 				B57DA377292437D600B21A17 /* Functions.swift in Sources */,
-				B57DA379292437D600B21A17 /* SettingsVC.swift in Sources */,
-				B57DA37A292437D600B21A17 /* notificationSubCell.swift in Sources */,
-				B57DA36F292437C600B21A17 /* notificationCellTableViewCell.swift in Sources */,
 				B551692529159094007356EC /* AppDelegate.swift in Sources */,
+				B55D6BD9293E352800891A28 /* goalCellTableViewCell.swift in Sources */,
+				B55D6BDC293E353100891A28 /* notificationSubCell.swift in Sources */,
+				B55D6BD7293E352800891A28 /* notificationCellTableViewCell.swift in Sources */,
 				B55D6BCF293DAF0B00891A28 /* JournalEntryViewController.swift in Sources */,
+				B55D6BE1293E355000891A28 /* Notifications.swift in Sources */,
 				B55D6BCE293DAF0B00891A28 /* Journal.swift in Sources */,
 				B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */,
 				B55D6BC7293D743800891A28 /* ScanVC.swift in Sources */,
 				B55D6BC5293D743000891A28 /* Food.swift in Sources */,
 				B56B49B62938228C00FCF701 /* DetailedFoodView.swift in Sources */,
 				B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */,
-				B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */,
 				B55D6BD0293DAF0B00891A28 /* JournalHomeViewController.swift in Sources */,
 				B551692729159094007356EC /* SceneDelegate.swift in Sources */,
 				B5D7B2DE293D5CB9002B5622 /* StepTracker.swift in Sources */,

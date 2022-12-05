@@ -101,6 +101,7 @@ class StepTracker: UIViewController {
                                                         let nam = document.data()["name"] as? String ?? "FAIL"
                                                         if (nam == globalName){
                                                             self.stepCount = Int(response.numberOfSteps) + oldCount
+                                                            globalSteps = Int(response.numberOfSteps) + oldCount
                                                             db.collection("users").document(document.documentID).updateData(["steps": self.stepCount])
                                                         }
                                                     }

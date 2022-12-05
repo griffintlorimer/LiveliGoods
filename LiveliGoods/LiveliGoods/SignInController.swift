@@ -13,15 +13,17 @@ import FirebaseFirestore
 
 var globalName = ""
 var globalMeal = "meal"
+var globalWater: [String] = []
 var globalBreakFast: [String] = []
 var globalLunch: [String] = []
 var globalDinner: [String] = []
-var globalWater: [String] = []
 var globalJournal: [String] = []
+var globalSteps = 0
 
 
 class SignInController: UIViewController  {
-    @IBOutlet var signInButton: GIDSignInButton!
+//    @IBOutlet var signInButton: GIDSignInButton!
+    @IBOutlet weak var signInButton: GIDSignInButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +31,8 @@ class SignInController: UIViewController  {
         
     }
     
+//    @IBAction func clicked(_ sender: Any) {
+//    }
     @IBAction func clicked(_ sender: Any) {
         
         let today = Date.now
@@ -92,16 +96,24 @@ class SignInController: UIViewController  {
                                         let wlist = document.data()["water"] as? [String] ?? []
                                         
                                         let jlist = document.data()["journal"] as? [String] ?? []
+                                        let steps = document.data()["steps"] as? Int ?? 0
 
 
-                                        globalBreakFast = bflist
-                                        globalLunch = llist
-                                        globalDinner = dlist
-                                        globalWater = wlist
-                                        globalJournal = jlist
 
                                         if (nam == username && dat == shortDate){
                                             alreadyInDB = true
+                                            globalWater = wlist
+                                            globalBreakFast = bflist
+                                            globalLunch = llist
+                                            globalDinner = dlist
+                                            globalJournal = jlist
+                                            print("wlist")
+                                            print(wlist)
+                                            
+                                            print("global water")
+                                            print(globalWater)
+                                            globalSteps = steps
+                                            break
                                         } else if (nam == username && dat != shortDate){
                                             db.collection("users").document(document.documentID).delete()
                                         }
@@ -118,17 +130,18 @@ class SignInController: UIViewController  {
                                     globalDinner = []
                                     globalWater = []
                                     globalJournal = []
+                                    globalSteps = 0
+                                    print("in here")
                                 }
                         }
                     }
-            
-                    
-                    
                     
                     
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
+                    print("global water 2")
+                    print(globalWater)
                     self.present(tabbarVC, animated: false, completion: nil)
                 }
             }

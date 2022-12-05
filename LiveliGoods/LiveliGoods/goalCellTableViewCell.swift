@@ -1,12 +1,3 @@
-//
-//  goalCellTableViewCell.swift
-//  NotificationSystem
-//
-//  Created by Lev Rose on 11/8/22.
-//
-
-import UIKit
-
 class goalCellTableViewCell: UITableViewCell {
     
     
@@ -14,7 +5,9 @@ class goalCellTableViewCell: UITableViewCell {
     @IBOutlet weak var myGoalNum: UITextField!
     @IBOutlet var myLabel : UILabel!
     
-    public let goals = ["Daily Water Intake Goal", "Daily Calorie Intake Goal", "Daily Steps Goal"]
+    var VC: SettingsVC = SettingsVC()
+    
+    public let goals = ["Daily Calorie Intake Goal", "Daily Water Intake Goal", "Daily Steps Goal"]
 
         static let identifier = "goalCell"
         
@@ -38,8 +31,19 @@ class goalCellTableViewCell: UITableViewCell {
             myGoalNum.text = "0"
         }
         
+        if (myLabel.text == goals[0]){
+            VC.calGoal = Int(myGoalNum.text!) ?? 0
+        }
+        if (myLabel.text == goals[1]){
+            VC.drinkGoal = Int(myGoalNum.text!) ?? 0
+        }
+        if (myLabel.text == goals[2]){
+            VC.stepGoal = Int(myGoalNum.text!) ?? 0
+        }
         
-     
+        VC.storeUserDefaults()
+        VC.notifier.loadNotifications()
+        
     }
     
     

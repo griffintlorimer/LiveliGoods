@@ -27,16 +27,20 @@ class SummaryViewController: UIViewController {
     @IBOutlet weak var journalProgress: UIProgressView!
     
     //Journal Summary
+//    UserDefaults.standard.set(calGoal, forKey: "calGoal")
+//    UserDefaults.standard.set(drinkGoal, forKey: "drinkGoal")
+//    UserDefaults.standard.set(stepGoal, forKey: "stepGoal")
+
     var journalGoal = 0
     var timesJournaled = 0
     
-    var stepsGoal = 0
-    var stepsDone = 0
+    var stepsGoal = UserDefaults.standard.object(forKey: "stepGoal") as? Int ?? 0
+    var stepsDone = globalSteps
     
-    var mealGoal = 0 // snacks and meals combined
+    var mealGoal = UserDefaults.standard.object(forKey: "calGoal") as? Int ?? 0
     var mealsAte = 0
 
-    var waterGoal = 0
+    var waterGoal = UserDefaults.standard.object(forKey: "drinkGoal") as? Int ?? 0
     var waterDrank = 0
     
     var apiKey = "oXFJ0OJVa45z0BZiCb1BYA==0xRS1WXuFVfZRRg0"
@@ -49,8 +53,13 @@ class SummaryViewController: UIViewController {
         stepInfoUpdate()
         journalInfoUpdate()
         print("hello")
+        
+        update()
        
         // Do any additional setup after loading the view.
+        
+
+        
     }
     // only to be done at beginning of each day
 //    DispatchQueue.global().async {
@@ -162,7 +171,7 @@ class SummaryViewController: UIViewController {
     
     func nutritionInfoUpdate() {
         // check if have logged water or food intake and updates both labels and progress views
-        mealGoal = UserDefaults.standard.integer(forKey: "eatReminders")
+        mealGoal = UserDefaults.standard.integer(forKey: "calGoal")
         waterGoal = UserDefaults.standard.integer(forKey: "drinkGoal")
         if (mealGoal < 1){
             mealGoal = 1
@@ -174,20 +183,30 @@ class SummaryViewController: UIViewController {
         let waterPercent =  waterDrank / waterGoal
         mealsNotificaion.text = "\(mealsAte) /day"
         mealsProgress.setProgress(Float(mealsPercent), animated: true)
-        waterNotification.text = "\(waterDrank) /day"
+        waterNotification.text = "\(waterDrank)oz /day"
         waterProgress.setProgress(Float(waterPercent), animated: true)
+        var mealGoalFlag = mealGoal-mealsAte
+        if (mealGoalFlag <= 0){
+            mealGoalFlag = 0
+        }
+
+        var waterGoalFlag = waterGoal-waterDrank
+        if (waterGoalFlag <= 0){
+            waterGoalFlag = 0
+        }
         if mealsAte == mealGoal && waterGoal == waterDrank {
             nutritionMessage.text = "Full for today!"
         }
         else if waterGoal == waterDrank {
-            nutritionMessage.text = "Water goal met. \(mealGoal-mealsAte) meals left."
+            nutritionMessage.text = "Water goal met. \(mealGoalFlag) meals left."
         }
         else if mealsAte == mealGoal  {
-            nutritionMessage.text = "Meal goal met. \(waterGoal-waterDrank) oz. water left to drink."
+            nutritionMessage.text = "Meal goal met. \(waterGoalFlag) oz. water left to drink."
         }
         else {
-            nutritionMessage.text = "\(mealGoal-mealsAte) meals left. \(waterGoal-waterDrank) oz. water left to drink."
+            nutritionMessage.text = "\(mealGoalFlag) calories left. \(waterGoalFlag) oz. water left to drink."
         }
+        UserDefaults.standard.object(forKey: "calGoal") as? Int ?? 0
     }
     
     
@@ -201,19 +220,25 @@ class SummaryViewController: UIViewController {
    
     
     func stepInfoUpdate() {
+        stepsDone = globalSteps
         stepsGoal = UserDefaults.standard.integer(forKey: "stepGoal")
         if (stepsGoal < 1){
             stepsGoal = 1
         }
+        var stepsGoalFlag = stepsGoal-stepsDone
+        if (stepsGoalFlag <= 0){
+            stepsGoalFlag = 0
+        }
         let stepsPercent =  stepsDone / stepsGoal
-        stepsNotification.text = "\(stepsDone) /day"
+        stepsNotification.text = "\(stepsDone) steps/day"
         stepsProgress.setProgress(Float(stepsPercent), animated: true)
         if stepsDone == stepsGoal {
             stepsMessage.text = "Steps goal met!"
         }
         else {
-            stepsMessage.text = "\(stepsGoal-stepsDone) steps left."
+            stepsMessage.text = "\(stepsGoalFlag) steps left."
         }
+        stepsGoal = UserDefaults.standard.object(forKey: "stepGoal") as? Int ?? 0
         
         // if reach
     }
@@ -238,7 +263,53 @@ class SummaryViewController: UIViewController {
      
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        update()
+    }
+    
+    func update(){
+        
+        print(globalWater)
+        var wat = 0
+        for water in globalWater {
+            var split = water.components(separatedBy: " at ")
+            print(split[0].replacingOccurrences(of: "oz", with: ""))
+            wat += Int(split[0].replacingOccurrences(of: "oz", with: "")) ?? 0
+        }
+        waterDrank = wat
+        
+        
+        var cals = 0
+        
+        for breakfast in globalBreakFast {
+            var split = breakfast.components(separatedBy: ": ")
+            var cal = split[1].replacingOccurrences(of: " calories", with: "")
+            cals += Int(cal) ?? 0
+        }
+        
+        for lunch in globalLunch {
+            var split = lunch.components(separatedBy: ": ")
+            var cal = split[1].replacingOccurrences(of: " calories", with: "")
+            cals += Int(cal) ?? 0
+        }
+        
+        for dinner in globalDinner {
+            var split = dinner.components(separatedBy: ": ")
+            var cal = split[1].replacingOccurrences(of: " calories", with: "")
+            cals += Int(cal) ?? 0
+        }
+        
+        mealsAte = cals
+        
+        UserDefaults.standard.object(forKey: "drinkGoal") as? Int ?? 0
+        nutritionInfoUpdate()
+    }
+    
 
+    override func viewWillAppear(_ animated: Bool) {
+        stepInfoUpdate()
+        update()
+    }
     
 
 }
