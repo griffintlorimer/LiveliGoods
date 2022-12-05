@@ -48,7 +48,7 @@ class SignInController: UIViewController  {
         // Start the sign in flow!
         GIDSignIn.sharedInstance.signIn(with: config, presenting: self) { [unowned self] user, error in
 
-          if let error = error {
+            if error != nil {
             // ...
             return
           }
@@ -64,16 +64,15 @@ class SignInController: UIViewController  {
             
             Auth.auth().signIn(with: credential) { authResult, error in
                 if let error = error {
-                  let authError = error as NSError
+                    _ = error as NSError
                     print("err!")
                   return
                 } else {
                     print("no err!")
                     if let user = authResult?.user {
-                        print(user.displayName!)
                         globalName = user.displayName!
                         
-                        var db = Firestore.firestore()
+                        let db = Firestore.firestore()
                         var alreadyInDB = false
                         
                         db.collection("users")
@@ -140,8 +139,7 @@ class SignInController: UIViewController  {
                     
                     let storyboard = UIStoryboard(name: "Main", bundle: nil)
                     let tabbarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController") as! UITabBarController
-                    print("global water 2")
-                    print(globalWater)
+
                     self.present(tabbarVC, animated: false, completion: nil)
                 }
             }

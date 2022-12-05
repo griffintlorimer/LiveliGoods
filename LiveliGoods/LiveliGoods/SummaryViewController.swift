@@ -272,7 +272,7 @@ class SummaryViewController: UIViewController {
         print(globalWater)
         var wat = 0
         for water in globalWater {
-            var split = water.components(separatedBy: " at ")
+            let split = water.components(separatedBy: " at ")
             print(split[0].replacingOccurrences(of: "oz", with: ""))
             wat += Int(split[0].replacingOccurrences(of: "oz", with: "")) ?? 0
         }
@@ -282,20 +282,20 @@ class SummaryViewController: UIViewController {
         var cals = 0
         
         for breakfast in globalBreakFast {
-            var split = breakfast.components(separatedBy: ": ")
-            var cal = split[1].replacingOccurrences(of: " calories", with: "")
+            let split = breakfast.components(separatedBy: ": ")
+            let cal = split[1].replacingOccurrences(of: " calories", with: "")
             cals += Int(cal) ?? 0
         }
         
         for lunch in globalLunch {
-            var split = lunch.components(separatedBy: ": ")
-            var cal = split[1].replacingOccurrences(of: " calories", with: "")
+            let split = lunch.components(separatedBy: ": ")
+            let cal = split[1].replacingOccurrences(of: " calories", with: "")
             cals += Int(cal) ?? 0
         }
         
         for dinner in globalDinner {
-            var split = dinner.components(separatedBy: ": ")
-            var cal = split[1].replacingOccurrences(of: " calories", with: "")
+            let split = dinner.components(separatedBy: ": ")
+            let cal = split[1].replacingOccurrences(of: " calories", with: "")
             cals += Int(cal) ?? 0
         }
         

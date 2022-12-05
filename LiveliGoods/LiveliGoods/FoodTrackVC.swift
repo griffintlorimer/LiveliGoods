@@ -76,8 +76,8 @@ class FoodTrackVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             print(input2)
             let waterString = "\(input1)oz at \(input2)"
             
-            var db = Firestore.firestore()
-            var alreadyInDB = false
+            let db = Firestore.firestore()
+            _ = false
             
             db.collection("users")
                 .getDocuments() { (querySnapshot, err) in

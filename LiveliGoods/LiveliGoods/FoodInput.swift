@@ -36,7 +36,6 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
     // GET https://api.spoonacular.com/food/search?apiKey=63af9b43d60fbd08b37e7c24aac3e5d87c563d4f&query=apple&number=2
     // function to do stuff when searchbar is clicked
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        print("CLICKED")
         let text = searchBar.text
         if (text?.count ?? 0 <= 0){
             print("EMPTY")
@@ -84,7 +83,7 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let fat = apiResults[indexPath.row].totalNutrients.CHOCDF, let carbs = apiResults[indexPath.row].totalNutrients.CHOCDF, let protein = apiResults[indexPath.row].totalNutrients.PROCNT {
+        if let fat = apiResults[indexPath.row].totalNutrients.CHOCDF, let carbs_ = apiResults[indexPath.row].totalNutrients.CHOCDF, let protein = apiResults[indexPath.row].totalNutrients.PROCNT {
             let dfv = DetailedFoodView()
             dfv.foodName = searchTerm
             dfv.calories = Int(apiResults[indexPath.row].calories)

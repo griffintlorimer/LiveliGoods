@@ -18,19 +18,19 @@ class Searcher {
         
         if (searchTerm != ""){
         let url = URL(string: stringUrl)
-            print(url)
+            print(url ?? "")
         let data = try! Data(contentsOf: url!)
             print(data.base64EncodedString())
         
-        let json = String(data: data, encoding: String.Encoding.utf8)
+            _ = String(data: data, encoding: String.Encoding.utf8)
         
         var theData: ApiResult
         theData = try! JSONDecoder().decode(ApiResult.self, from:data)
             
         
-        print(theData.totalNutrients.CHOCDF?.quantity)
-        print(theData.totalNutrients.FAT?.quantity)
-        print(theData.totalNutrients.PROCNT?.quantity)
+            print(theData.totalNutrients.CHOCDF?.quantity as Any)
+            print(theData.totalNutrients.FAT?.quantity as Any)
+            print(theData.totalNutrients.PROCNT?.quantity as Any)
 
 
         return theData

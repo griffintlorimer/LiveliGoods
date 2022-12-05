@@ -59,7 +59,7 @@ class ScanVC: UIViewController, UIImagePickerControllerDelegate, UITableViewDele
             task.resume()
         }
         
-        defer {
+        do {
             self.resultsTV.reloadData()
         }
         

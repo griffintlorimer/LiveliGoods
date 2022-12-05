@@ -30,7 +30,7 @@ class JournalEntryViewController: UIViewController {
     
     @objc func tappedSave() {
         if let text = titleField.text, !text.isEmpty, !noteField.text.isEmpty {
-            var db = Firestore.firestore()
+            let db = Firestore.firestore()
 
             db.collection("users")
                 .getDocuments() { (querySnapshot, err) in
@@ -40,10 +40,10 @@ class JournalEntryViewController: UIViewController {
                         for document in querySnapshot!.documents {
                             let nam = document.data()["name"] as? String ?? "FAIL"
                             var jlist = document.data()["journal"] as? [String] ?? []
-                            jlist.append("\(text): \(self.noteField.text)")
+                            jlist.append("\(text): \(self.noteField.text ?? "")")
 
                             if (nam == globalName){
-                                jlist.append("\(text): \(self.noteField.text)")
+                                jlist.append("\(text): \(self.noteField.text ?? "")")
                                 db.collection("users").document(document.documentID).updateData(["journal": jlist])
                             }
                         }

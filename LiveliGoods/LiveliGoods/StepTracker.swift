@@ -66,10 +66,10 @@ class StepTracker: UIViewController {
                 } else {
                     for document in querySnapshot!.documents {
                         let nam = document.data()["name"] as? String ?? "FAIL"
-                        var count = document.data()["steps"] as? Int ?? 0
+                        let count = document.data()["steps"] as? Int ?? 0
                         if (nam == globalName){
                             self.oldCount = count
-                            self.actualSteps.text = "steps: \(self.oldCount)"
+                            self.actualSteps.text = String(self.oldCount)
                         }
                     }
                 }
@@ -88,20 +88,19 @@ class StepTracker: UIViewController {
                                 if let response = data {
                                     DispatchQueue.main.async { [self] in
 //                                        stepCount +=
-                                        print(response.numberOfSteps)
-                                        print("Number Of Steps == \(self.stepCount)")
-                                        actualSteps.text = "Step Counter : \(self.stepCount)"
+         
+                                        actualSteps.text = String(self.stepCount)
 //                                        self.db
                                         db.collection("users")
-                                            .getDocuments() { (querySnapshot, err) in
+                                            .getDocuments() { [self] (querySnapshot, err) in
                                                 if let err = err {
                                                     print("Error getting documents: \(err)")
                                                 } else {
                                                     for document in querySnapshot!.documents {
                                                         let nam = document.data()["name"] as? String ?? "FAIL"
                                                         if (nam == globalName){
-                                                            self.stepCount = Int(response.numberOfSteps) + oldCount
-                                                            globalSteps = Int(response.numberOfSteps) + oldCount
+                                                            self.stepCount = Int(truncating: response.numberOfSteps) + oldCount
+                                                            globalSteps = Int(truncating: response.numberOfSteps) + oldCount
                                                             db.collection("users").document(document.documentID).updateData(["steps": self.stepCount])
                                                         }
                                                     }

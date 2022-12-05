@@ -94,8 +94,8 @@ class DetailedFoodView: UIViewController {
         print(globalName)
         print(globalMeal)
         
-        var db = Firestore.firestore()
-        var alreadyInDB = false
+        let db = Firestore.firestore()
+        _ = false
         
         db.collection("users")
             .getDocuments() { (querySnapshot, err) in
@@ -104,14 +104,14 @@ class DetailedFoodView: UIViewController {
                 } else {
                     for document in querySnapshot!.documents {
                         let nam = document.data()["name"] as? String ?? "FAIL"
-                        let dat = document.data()["date"] as? String ?? "FAIL"
+                        _ = document.data()["date"] as? String ?? "FAIL"
                         var count = document.data()["currentCalCount"] as? Int ?? 0
 
                         var breakfast = document.data()["breakfast"] as? [String] ?? []
                         var lunch = document.data()["lunch"] as? [String] ?? []
                         var dinner = document.data()["dinner"] as? [String] ?? []
                         
-                        var foodMeal = "\(self.foodName!): \(self.currentCals) calories"
+                        let foodMeal = "\(self.foodName!): \(self.currentCals) calories"
                         
                         count += self.currentCals
                         if (nam == globalName){
