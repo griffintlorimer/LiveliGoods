@@ -17,6 +17,7 @@ var globalBreakFast: [String] = []
 var globalLunch: [String] = []
 var globalDinner: [String] = []
 var globalWater: [String] = []
+var globalJournal: [String] = []
 
 
 class SignInController: UIViewController  {
@@ -89,11 +90,15 @@ class SignInController: UIViewController  {
                                         let llist = document.data()["lunch"] as? [String] ?? []
                                         let dlist = document.data()["dinner"] as? [String] ?? []
                                         let wlist = document.data()["water"] as? [String] ?? []
+                                        
+                                        let jlist = document.data()["journal"] as? [String] ?? []
+
 
                                         globalBreakFast = bflist
                                         globalLunch = llist
                                         globalDinner = dlist
                                         globalWater = wlist
+                                        globalJournal = jlist
 
                                         if (nam == username && dat == shortDate){
                                             alreadyInDB = true
@@ -107,11 +112,12 @@ class SignInController: UIViewController  {
                                     print("updated!")
                                     
                                     let collection = db.collection("users")
-                                    collection.addDocument(data: ["name": user.displayName!, "date": shortDate, "currentCalCount": 0, "steps":0, "breakfast": [], "lunch": [], "dinner": [], "water": []])
+                                    collection.addDocument(data: ["name": user.displayName!, "date": shortDate, "currentCalCount": 0, "steps":0, "breakfast": [], "lunch": [], "dinner": [], "water": [], "journal": []])
                                     globalBreakFast = []
                                     globalLunch = []
                                     globalDinner = []
                                     globalWater = []
+                                    globalJournal = []
                                 }
                         }
                     }

@@ -77,7 +77,6 @@ class FoodTrackVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
             print(input2)
             let waterString = "\(input1)oz at \(input2)"
             
-            
             var db = Firestore.firestore()
             var alreadyInDB = false
             
@@ -93,24 +92,19 @@ class FoodTrackVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
                             
                             if (nam == globalName){
                                 db.collection("users").document(document.documentID).updateData(["water": water])
-
                             }
                         }
                     }
                 }
             
-            
-            
             globalWater.append(waterString)
             self.waterList.append(waterString)
-            
             waterTV.reloadData()
-
         }
+        
         alertController.addAction(cancelAction)
         alertController.addAction(saveAction)
         present(alertController, animated: true, completion: nil)
-        
     }
     
     // TABLEVIEW CONTENT
@@ -186,9 +180,6 @@ class FoodTrackVC: UIViewController, UITableViewDelegate, UITableViewDataSource 
         breakfastTV.register(UITableViewCell.self, forCellReuseIdentifier: "breakfast")
         breakfastTV.dataSource = self
         breakfastTV.delegate = self
-        
-        print("this screen")
-        
         
         //dinner
         dinnerTV.register(UITableViewCell.self, forCellReuseIdentifier: "dinner")
