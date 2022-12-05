@@ -14,6 +14,9 @@
 		B551692C29159094007356EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551692A29159094007356EC /* Main.storyboard */; };
 		B551692E29159095007356EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B551692D29159095007356EC /* Assets.xcassets */; };
 		B551693129159095007356EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B551692F29159095007356EC /* LaunchScreen.storyboard */; };
+		B55D6BC3293D73E600891A28 /* FoodTrackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BC2293D73E600891A28 /* FoodTrackVC.swift */; };
+		B55D6BC5293D743000891A28 /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BC4293D743000891A28 /* Food.swift */; };
+		B55D6BC7293D743800891A28 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B55D6BC6293D743800891A28 /* ScanVC.swift */; };
 		B566DA0F2924707D00A92940 /* food.jpg in Resources */ = {isa = PBXBuildFile; fileRef = B566DA0E2924707D00A92940 /* food.jpg */; };
 		B566DA11292472AD00A92940 /* liveligoods.png in Resources */ = {isa = PBXBuildFile; fileRef = B566DA10292472AD00A92940 /* liveligoods.png */; };
 		B56B49B42938107B00FCF701 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B56B49B32938107B00FCF701 /* GoogleService-Info.plist */; };
@@ -46,6 +49,9 @@
 		B551692D29159095007356EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B551693029159095007356EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B551693229159095007356EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B55D6BC2293D73E600891A28 /* FoodTrackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodTrackVC.swift; sourceTree = "<group>"; };
+		B55D6BC4293D743000891A28 /* Food.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
+		B55D6BC6293D743800891A28 /* ScanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		B566DA0E2924707D00A92940 /* food.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = food.jpg; sourceTree = "<group>"; };
 		B566DA10292472AD00A92940 /* liveligoods.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = liveligoods.png; sourceTree = "<group>"; };
 		B56B49B32938107B00FCF701 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -120,8 +126,11 @@
 				B551692629159094007356EC /* SceneDelegate.swift */,
 				B551692829159094007356EC /* SignInController.swift */,
 				B580EB3A291D996C0053D727 /* FoodInput.swift */,
+				B55D6BC2293D73E600891A28 /* FoodTrackVC.swift */,
 				B56B49B52938228C00FCF701 /* DetailedFoodView.swift */,
 				B580EB3C291DB9400053D727 /* Searcher.swift */,
+				B55D6BC4293D743000891A28 /* Food.swift */,
+				B55D6BC6293D743800891A28 /* ScanVC.swift */,
 				B580EB3E291EAEF60053D727 /* ApiResult.swift */,
 				B580EB40291EB0C30053D727 /* FoodObject.swift */,
 				B551692A29159094007356EC /* Main.storyboard */,
@@ -268,6 +277,7 @@
 			files = (
 				B580EB41291EB0C30053D727 /* FoodObject.swift in Sources */,
 				B580EB3D291DB9400053D727 /* Searcher.swift in Sources */,
+				B55D6BC3293D73E600891A28 /* FoodTrackVC.swift in Sources */,
 				B580EB45291EBF7F0053D727 /* CustomTableViewCell.swift in Sources */,
 				B551692929159094007356EC /* SignInController.swift in Sources */,
 				B57DA377292437D600B21A17 /* Functions.swift in Sources */,
@@ -276,6 +286,8 @@
 				B57DA36F292437C600B21A17 /* notificationCellTableViewCell.swift in Sources */,
 				B551692529159094007356EC /* AppDelegate.swift in Sources */,
 				B580EB3F291EAEF60053D727 /* ApiResult.swift in Sources */,
+				B55D6BC7293D743800891A28 /* ScanVC.swift in Sources */,
+				B55D6BC5293D743000891A28 /* Food.swift in Sources */,
 				B56B49B62938228C00FCF701 /* DetailedFoodView.swift in Sources */,
 				B580EB3B291D996D0053D727 /* FoodInput.swift in Sources */,
 				B57DA371292437C600B21A17 /* goalCellTableViewCell.swift in Sources */,

@@ -22,21 +22,18 @@ class DetailedFoodView: UIViewController {
     var stepLabel: UILabel!
     var foodLabel: UILabel!
     var calorieLabel: UILabel!
-    var proteinLabel: UILabel!
-    var fatLabel: UILabel!
-    var carbLabel: UILabel!
     
     var currentCals = 0
-
     
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(globalMeal)
+        
         view.backgroundColor = UIColor.white
 
-        
         // food name
         let foodNameRect = CGRect(x: 120, y: 120, width: 150, height: 50)
         foodLabel = UILabel(frame: foodNameRect)
@@ -47,32 +44,11 @@ class DetailedFoodView: UIViewController {
         // cals
         let calorieRect = CGRect(x: 120, y: 180, width: 150, height: 50)
         calorieLabel = UILabel(frame: calorieRect)
-        calorieLabel.text = "calories: \(String(calories))g"
+        calorieLabel.text = "calories: \(String(calories))"
         calorieLabel.textAlignment = .center
         view.addSubview(calorieLabel)
         currentCals = calories
-        
-        // protein
-        let proteinRect = CGRect(x: 120, y: 220, width: 150, height: 50)
-        proteinLabel = UILabel(frame: proteinRect)
-        proteinLabel.text = "protein: \(String(protein))g"
-        proteinLabel.textAlignment = .center
-        view.addSubview(proteinLabel)
-        
-        // fat
-        let fatRect = CGRect(x: 120, y: 260, width: 150, height: 50)
-        fatLabel = UILabel(frame: fatRect)
-        fatLabel.text = "fat: \(String(fat))g"
-        fatLabel.textAlignment = .center
-        view.addSubview(fatLabel)
-        
-        // carb
-        let carbRect = CGRect(x: 120, y: 300, width: 150, height: 50)
-        carbLabel = UILabel(frame: carbRect)
-        carbLabel.text = "carbs: \(String(carbs))g"
-        carbLabel.textAlignment = .center
-        view.addSubview(carbLabel)
-        
+
         // setup stepper label
         let stepperRect = CGRect(x: 120, y: 400, width: 150, height: 50)
         stepLabel = UILabel(frame: stepperRect)
@@ -106,9 +82,6 @@ class DetailedFoodView: UIViewController {
           quantity = Int(sender.value)
           stepLabel.text = "quantity: \(quantity)"
           calorieLabel.text = "calories: \(String(calories * quantity))"
-          proteinLabel.text = "protein: \(String(protein * quantity))g"
-          fatLabel.text = "fat: \(String(fat * quantity))g"
-          carbLabel.text = "carbs: \(String(carbs * quantity))g"
           currentCals = calories * quantity
           print(currentCals)
 
@@ -119,6 +92,7 @@ class DetailedFoodView: UIViewController {
     @objc func buttonPressed(){
         print("button pressed")
         print(globalName)
+        print(globalMeal)
         
         var db = Firestore.firestore()
         var alreadyInDB = false
@@ -132,10 +106,32 @@ class DetailedFoodView: UIViewController {
                         let nam = document.data()["name"] as? String ?? "FAIL"
                         let dat = document.data()["date"] as? String ?? "FAIL"
                         var count = document.data()["currentCalCount"] as? Int ?? 0
+
+                        var breakfast = document.data()["breakfast"] as? [String] ?? []
+                        var lunch = document.data()["lunch"] as? [String] ?? []
+                        var dinner = document.data()["dinner"] as? [String] ?? []
+                        
+                        var foodMeal = "\(self.foodName!): \(self.currentCals) calories"
+                        
                         count += self.currentCals
                         if (nam == globalName){
-                            db.collection("users").document(document.documentID).updateData(["currentCalCount": count])
-                            
+                            if (globalMeal == "breakfast"){
+                                breakfast.append(foodMeal)
+                                globalBreakFast.append(foodMeal)
+                                db.collection("users").document(document.documentID).updateData(["currentCalCount": count, "breakfast": breakfast])
+                                
+                            } else if (globalMeal == "lunch"){
+                                lunch.append(foodMeal)
+                                globalLunch.append(foodMeal)
+
+                                db.collection("users").document(document.documentID).updateData(["currentCalCount": count, "lunch": lunch])
+                                
+                            } else {
+                                dinner.append(foodMeal)
+                                globalDinner.append(foodMeal)
+
+                                db.collection("users").document(document.documentID).updateData(["currentCalCount": count, "dinner": dinner])
+                            }
                         }
                     }
 
@@ -160,3 +156,10 @@ class DetailedFoodView: UIViewController {
     */
 
 }
+
+
+struct Meal:Decodable, Encodable {
+    var name: String
+    var calories: Int
+}
+

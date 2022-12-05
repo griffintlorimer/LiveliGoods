@@ -12,6 +12,12 @@ import FirebaseAuth
 import FirebaseFirestore
 
 var globalName = ""
+var globalMeal = "meal"
+var globalBreakFast: [String] = []
+var globalLunch: [String] = []
+var globalDinner: [String] = []
+var globalWater: [String] = []
+
 
 class SignInController: UIViewController  {
     @IBOutlet var signInButton: GIDSignInButton!
@@ -78,6 +84,17 @@ class SignInController: UIViewController  {
                                     for document in querySnapshot!.documents {
                                         let nam = document.data()["name"] as? String ?? "FAIL"
                                         let dat = document.data()["date"] as? String ?? "FAIL"
+                                        
+                                        let bflist = document.data()["breakfast"] as? [String] ?? []
+                                        let llist = document.data()["lunch"] as? [String] ?? []
+                                        let dlist = document.data()["dinner"] as? [String] ?? []
+                                        let wlist = document.data()["water"] as? [String] ?? []
+
+                                        globalBreakFast = bflist
+                                        globalLunch = llist
+                                        globalDinner = dlist
+                                        globalWater = wlist
+
                                         if (nam == username && dat == shortDate){
                                             alreadyInDB = true
                                         } else if (nam == username && dat != shortDate){
@@ -86,12 +103,15 @@ class SignInController: UIViewController  {
                                     }
 
                                 }
-                                print(alreadyInDB)
                                 if (!alreadyInDB){
                                     print("updated!")
                                     
                                     let collection = db.collection("users")
-                                    collection.addDocument(data: ["name": user.displayName!, "date": shortDate, "water": 0, "currentCalCount": 0, "steps":0])
+                                    collection.addDocument(data: ["name": user.displayName!, "date": shortDate, "currentCalCount": 0, "steps":0, "breakfast": [], "lunch": [], "dinner": [], "water": []])
+                                    globalBreakFast = []
+                                    globalLunch = []
+                                    globalDinner = []
+                                    globalWater = []
                                 }
                         }
                     }

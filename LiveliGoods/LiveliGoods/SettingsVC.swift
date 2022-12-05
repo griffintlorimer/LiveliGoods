@@ -194,7 +194,6 @@ class SettingsVC : UIViewController, UITableViewDelegate, UITableViewDataSource,
         theTable.delegate = self
         theTable.dataSource = self
         theTable.backgroundColor = UIColor(named: "Background")
-  
         
         theTable.register(notificationCellTableViewCell.nib(), forCellReuseIdentifier: notificationCellTableViewCell.identifier)
         theTable.register(goalCellTableViewCell.nib(), forCellReuseIdentifier: goalCellTableViewCell.identifier)

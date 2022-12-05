@@ -10,6 +10,7 @@ import UIKit
 import GoogleUtilities
 import FirebaseAuth
 
+
 class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UITableViewDelegate  {
     
     @IBOutlet var searchBar: UISearchBar!
@@ -83,14 +84,10 @@ class FoodInput: UIViewController, UISearchBarDelegate, UITableViewDataSource,UI
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("called!")
         if let fat = apiResults[indexPath.row].totalNutrients.CHOCDF, let carbs = apiResults[indexPath.row].totalNutrients.CHOCDF, let protein = apiResults[indexPath.row].totalNutrients.PROCNT {
             let dfv = DetailedFoodView()
             dfv.foodName = searchTerm
             dfv.calories = Int(apiResults[indexPath.row].calories)
-            dfv.fat = Int(fat.quantity)
-            dfv.protein = Int(protein.quantity)
-            dfv.carbs = Int(carbs.quantity)
             navigationController?.pushViewController(dfv, animated: true)
 
         }
